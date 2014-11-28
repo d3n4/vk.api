@@ -138,6 +138,7 @@ class Vk{
             curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
             curl_setopt($curl, CURLOPT_POST, true);
             curl_setopt($curl, CURLOPT_POSTFIELDS, $param['query']);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
             $out = curl_exec($curl);
 
             curl_close($curl);
